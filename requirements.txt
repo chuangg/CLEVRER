@@ -1,13 +1,12 @@
+h5py==2.10.0
+matplotlib==3.3.0
+numpy==1.19.1
+Pillow==7.2.0
+pycocotools==2.0.1
+scikit_learn==0.23.1
+scipy==1.5.2
+scikit-image
+torch==1.5.1
+torchvision==0.6.1
+opencv-python
 tqdm
-json
-numpy
-matplotlib
-cv2
-h5py
-gzip
-pickle
-skimage
-PIL
-scipy
-sklearn
-# pycocotools

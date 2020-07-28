@@ -5,7 +5,7 @@ This repository holds the codes for the paper
 
 > 
 **CLEVRER: Collision Events for Video Representation and Reasoning**,
-Kexin Yi and Chuang Gan and Yunzhu Li and Pushmeet Kohli and Jiajun Wu and Antonio Torralba and Joshua B. Tenenbaum, *ICLR*, 2020.
+Kexin Yi* and Chuang Gan* and Yunzhu Li and Pushmeet Kohli and Jiajun Wu and Antonio Torralba and Joshua B. Tenenbaum, *ICLR*, 2020.
 >
 [[Arxiv Preprint](https://arxiv.org/pdf/1910.01442)]
 [[Project Website](http://clevrer.csail.mit.edu/)]
@@ -36,8 +36,8 @@ Use git to clone this repository
 git clone git@github.com:chuangg/CLEVRER.git
 ```
 The code mainly consists of two parts, including the dynamics predictor and the program executor. 
-- dynamics predictor: we provide the implementation of the model in folder `temporal-reasoning`.
-- programe executor: the code is provided in folder `executor`. 
+- *dynamics predictor*: we provide the implementation of the model in folder `temporal-reasoning`.
+- *programe executor*: the code is provided in folder `executor`. 
 
 ### Get the data
 To help reproduced the reported results, we provide all the required data, including visual masks, parsed programs and dynamic predictions.
@@ -50,8 +50,7 @@ The **dynamic predictions** can be found [here][propnet_preds], including two ve
 - *with_edge_supervision*: the dynamics predictor is trained `with supervisions` in edges of the graph neural network.
 - *without_edge_supervision*: the dynamics predictor is trained `without supervisions` in edges of the graph neural network.
 >
-Please extract the archieved file you download using `tar -zxvf <file_path>` and place them under the path ``executor/data`` \
-(*e.g.,* `executor/data/propnet_preds/with(without)_edge_supervision`).
+Please extract the archieved file you download using `tar -zxvf <file_path>` and place them under the path ``executor/data`` (*e.g.,* `executor/data/propnet_preds/with(without)_edge_supervision`).
 #### Data for the dynamics predictor
 >
 The **results of video frame parser** (visual masks) can be found [here][proposals].
@@ -82,7 +81,7 @@ python run_mc.py --n_progs 1000
 
 We provide the code for the `dynamics predictor` to generate *dynamics predictions* as input of the `programe executor`.
 >
-Before training the dynamics predictor, please make sure that you have extracted the vidoe frames (named format **frame_00000.png**) and download the proposals. 
+Before training the dynamics predictor, please make sure that you have extracted the vidoe frames (named format **frame_00000.png**) and download the visual masks. 
 Please organize the files with the same structure as (or you can modify the frame path in `data.py` and `eval.py`.):
 ```
 video_frames/
@@ -101,13 +100,13 @@ processed_proposals/
 ├─...
 └ sim_19999.json
 ```
-`Note`: the index of videos/frames is starting from 0 (*i,e,. 00000*).
+`Note`: the index of videos/frames is starting from 0 (*i,e,*. 00000).
 
 #### Training
 The training scripts can be found in `temporal-reasoning/scripts/`, and the main arguments in the scripts including:
 - gen_valid_idx: set to 1 at the first training. 
 - **data_dir**: the directory of extracted frames.
-- **label_dir**: the directory of the downloaded proposals.
+- **label_dir**: the directory of the downloaded visual masks.
 - resume_epoch/iter: the checkpoint information (set to 0 if no checkpoints.)
 
 The name of scripts `train*.sh` is self-explained.
@@ -130,7 +129,7 @@ The tesing scripts can also be found in `temporal-reasoning/scripts`. One traini
 - ed_idx: the ending index for a data split (15000 for validation set; 20000 for testing set).
 - epoch/iter: the checkpoint information.
 
-More details about arguments can be found in `./temporal-reasoning/train.py`.
+More details about arguments can be found in `./temporal-reasoning/eval.py`.
 >
 Start testing
 ```

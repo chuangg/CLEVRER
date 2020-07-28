@@ -162,4 +162,4 @@ Please cite the following paper if you feel this repository useful.
 
 
 [propnet_preds]:https://drive.google.com/file/d/1u2OdG59Zl1PqNAnXZjDVMmhXSy3czR44/view?usp=sharing
-[proposals]:xxxx
+[proposals]:https://drive.google.com/file/d/1BJ8n1z0M7a-8yhDRX_P_50GakKXRf8uR/view?usp=sharing

@@ -6,7 +6,7 @@ pycocotools==2.0.1
 scikit_learn==0.23.1
 scipy==1.5.2
 scikit-image
-torch==1.5.1
-torchvision==0.6.1
+torch==1.0.0
+torchvision==0.2.0
 opencv-python
 tqdm

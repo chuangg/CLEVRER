@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+*.swo
+*.swp
+img*.png
+mask*.png
+frames/
+proposals_*/
+derender_proposals/
+propnet_predictions*/
+valid_idx_train.txt
+valid_idx_valid.txt
+files_*/
+eval_*/
+sample_*/
+imgs/

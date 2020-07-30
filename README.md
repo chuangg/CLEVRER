@@ -33,9 +33,9 @@ pip install -r requirements
 
 Use git to clone this repository
 ```
-git clone git@github.com:chuangg/CLEVRER.git
+git clone https://github.com/chuangg/CLEVRER.git
 ```
-The code mainly consists of two parts, including the dynamics predictor and the program executor. 
+The code mainly consists of two parts, including the **dynamics predictor** and the **program executor**. 
 - *dynamics predictor*: we provide the implementation of the model in folder `temporal-reasoning`.
 - *programe executor*: the code is provided in folder `executor`. 
 
@@ -57,7 +57,7 @@ The results of **video frame parser** (visual masks) can be found [here][proposa
 
 Please download **videos** from [project page](http://clevrer.csail.mit.edu/), and extract video frames.
 
-Before training/testing the dynamics predictor, please make sure that you have extracted the vidoe frames (named format **frame_00000.png**) and download the visual masks. 
+Before training/testing the dynamics predictor, please make sure that you have extracted the vidoe frames (named format **frame_00000.png**) and downloaded the visual masks. 
 Please organize the files with the same structure as (or you can modify the frame path in `./temporal-reasoning/data.py` and `./temporal-reasoning/eval.py`.):
 ```
 video_frames/
@@ -85,6 +85,9 @@ Go to the executor folder:
 ```
 cd ./executor
 ```
+
+#### Evaluation on validation set
+
 Before starting, please check and modify the path of the dynamic predictions in `line 22 and 24` in `executor/run_oe.py` and `executor/run_mc.py`. Make sure the path is valid.
 
 For open-ended questions:
@@ -97,6 +100,14 @@ For multiple-choice questions:
 python run_mc.py --n_progs 1000
 ```
 >
+
+#### Evaluation on test set
+
+Generate predicted answers on test set by running
+```
+python get_results.py
+```
+An answer prediction file for test set (`nsdr_pred.json`) will be generated, and you can get the evaluation metric results by uploading this file to the evaluation server [here][evalai].
 
 ## Training/Testing the dynamics predictor
 [[back to top](#CLEVRER)]
@@ -165,3 +176,4 @@ Please cite the following paper if you feel this repository useful.
 
 [propnet_preds]:https://drive.google.com/file/d/1u2OdG59Zl1PqNAnXZjDVMmhXSy3czR44/view?usp=sharing
 [proposals]:https://drive.google.com/file/d/1BJ8n1z0M7a-8yhDRX_P_50GakKXRf8uR/view?usp=sharing
+[evalai]:https://evalai.cloudcv.org/web/challenges/challenge-page/667/overview

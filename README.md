@@ -5,7 +5,7 @@ This repository holds the codes for the paper
 
 > 
 **CLEVRER: Collision Events for Video Representation and Reasoning**,
-Kexin Yi* and Chuang Gan* and Yunzhu Li and Pushmeet Kohli and Jiajun Wu and Antonio Torralba and Joshua B. Tenenbaum, *ICLR*, 2020.
+Kexin Yi*, Chuang Gan*, Yunzhu Li, Pushmeet Kohli, Jiajun Wu, Antonio Torralba, Joshua B. Tenenbaum, *ICLR*, 2020.
 >
 [[Arxiv Preprint](https://arxiv.org/pdf/1910.01442)]
 [[Project Website](http://clevrer.csail.mit.edu/)]
